@@ -325,7 +325,16 @@ section .title::after{
     content: "what I know";
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    width: calc(25% - 30px); /* Divides the right column into 4 equal columns */
+    display: inline-block;
+    padding: 10px; /* Adds some space inside the columns */
+    background-color: #f5f5f5; /* Optional: to highlight the columns */
+    border: 1px solid #ddd; /* Optional: border for better visibility */
+    box-sizing: border-box;
+}
+.skills .skills-content .column p {
+    font-size: 16px; /* Styling for text inside the columns */
+    color: #333; /* Text color */
 }
 .skills .skills-content .left .text{
     font-size: 20px;
@@ -354,6 +363,20 @@ section .title::after{
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
 }
+.skills .skills-content .right .multicolor-text{
+    text-align: center;
+            font-size: 20px;
+            background: linear-gradient(to left,
+                    violet,
+                    indigo,
+                    blue,
+                    green,
+                    pink,
+                    orange,
+                    red);
+            -webkit-background-clip: text;
+            color: transparent;
+}
 .skills .skills-content .right .info{
     display: flex;
     margin-bottom: 5px;
@@ -378,6 +401,9 @@ section .title::after{
     top: 0;
     background: crimson;
 }
+.skills-content .right .java::before{
+	width:90%;
+}
 .skills-content .right .html::before{
     width: 90%;
 }
@@ -393,9 +419,7 @@ section .title::after{
 .skills-content .right .c::before{
     width: 80%;
 }
-.skills-content .right .py::before{
-	width:60%;
-}
+
 
 /* teams section styling */
 .teams .title::after{
